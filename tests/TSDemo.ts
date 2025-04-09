@@ -26,9 +26,13 @@ console.log(`Difference of ${num1} & ${num2} is `+differenceOfNumbers);
 
 //Task 5 - Average Calculation:Create a variable `scores` that holds an array of numbers. Calculate and print the average of the numbers in the array.
 console.log('Task 5');
+let sum=0;
 let scores:number[] = [3,6,9,12,15,18];
-let sumOfNumbers:number = scores.reduce((acc, currentValue) => acc + currentValue, 0);
-let average=sumOfNumbers/scores.length;
+for(let i=0;i<scores.length;i++){
+    sum += scores[i];
+}
+console.log(sum)
+let average=sum/scores.length;
 console.log('Average of numbers is '+average);
 
 //Task 6 - Area of a Circle:Declare a variable `radius` with type `number`. Use it to calculate the area of a circle (πr²) and print the result. Use `Math.PI` for the value of π.
